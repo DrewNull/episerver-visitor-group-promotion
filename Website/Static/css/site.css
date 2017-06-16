@@ -1,0 +1,68 @@
+﻿section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-24 {
+    font-size: 24px;
+}
+
+.font-size-36 {
+    font-size: 36px;
+}
+
+.font-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.font-crimson-text {
+    font-family: 'Crimson Text', serif;
+}
+
+.site-header {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.site-footer {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.btn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.red {
+    color: red;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.font-size-900 {
+    font-size: 900px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.opacity-10 {
+    opacity: 0.1;
+}
+
+.EPiServerForms {
+    width: 800px;
+    margin: auto;
+}

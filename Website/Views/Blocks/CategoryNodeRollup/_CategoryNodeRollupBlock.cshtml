@@ -1,0 +1,21 @@
+﻿@model Website.ViewModels.Blocks.CategoryNodeRollup.CategoryNodeRollupBlockViewModel
+<section>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h2>@Model.Block.Heading</h2>
+            <p>@Model.Block.Subheading</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="row">
+                @foreach (var categoryNodeViewModel in Model.CategoryNodes)
+                {
+                    <div class="col-xs-6">
+                        @Html.Partial("~/Views/Shared/Partials/CategoryNodeCard/_CategoryNodeCard.cshtml", categoryNodeViewModel)
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

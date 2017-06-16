@@ -1,0 +1,8 @@
+﻿@model Website.ViewModels.Shared.MainNavigation.MainNavigationViewModel
+
+<ul class="nav nav-pills">
+    @foreach (var link in Model.Links)
+    {
+        <li role="presentation"><a href="@link.Url">@link.Text</a></li>
+    }
+</ul>

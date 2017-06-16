@@ -1,0 +1,21 @@
+﻿@model Website.ViewModels.Blocks.MusicLessonVariationRollup.MusicLessonVariationRollupBlockViewModel
+<section>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h2>@Model.Block.Heading</h2>
+            <p>@Model.Block.Subheading</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="row">
+                @foreach (var variation in Model.MusicLessonVariations)
+                {
+                    <div class="col-xs-4">
+                        @Html.Partial("~/Views/Shared/Partials/MusicLessonVariationCard/_MusicLessonVariationCard.cshtml", variation)
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

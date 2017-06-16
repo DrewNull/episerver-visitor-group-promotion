@@ -1,0 +1,11 @@
+﻿@model Website.ViewModels.Nodes.CategoryNode.CategoryNodeViewModel
+<div class="card">
+    <img class="card-img-top img-responsive" src="http://placehold.it/600x300?text=@Model.Model.Name" />
+    <div class="card-block">
+        <h3 class="card-title">@Model.Model.Name</h3>
+        <p class="card-text">@Model.Model.SeoInformation.Description</p>
+        <p>
+            <a href="@Model.Url" class="btn btn-primary">Learn more</a>
+        </p>
+    </div>
+</div>

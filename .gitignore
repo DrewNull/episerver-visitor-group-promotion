@@ -1,0 +1,17 @@
+
+.vs
+bin
+obj
+
+/packages
+
+/Commerce/Apps
+/Commerce/App_Data
+/Commerce/App_GlobalResources
+/Commerce/NotificationTemplates
+/Commerce/Default.aspx
+/Commerce/EPiServerLog.config
+/Commerce/EPiServerDefault.aspx
+/Commerce/Global.asax
+
+#/Website/App_Data

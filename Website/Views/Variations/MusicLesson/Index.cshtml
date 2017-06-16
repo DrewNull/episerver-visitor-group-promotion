@@ -1,0 +1,59 @@
+﻿@model Website.ViewModels.Variations.MusicLesson.MusicLessonVariationViewModel
+@{
+    Layout = "~/Views/Shared/Layout/_2ColumnLayout.cshtml";
+}
+
+<section>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h1>@Model.Model.Name</h1>
+                    <p>@Model.Model.SeoInformation.Description</p>
+                    <p>
+                        Schedule: @Model.Model.Schedule
+                    </p>
+                    <p>Instrument: @Model.Model.Instrument</p>
+                    <p>Location: @Model.Model.Location</p>
+                    <p>Number of Lessons: @Model.Model.NumberOfLessons</p>
+                    @if (Model.HasDiscount)
+                    {
+                        <p>
+                            <span class="line-through">
+                                <strong>@Model.ListPrice.ToString("C")</strong>
+                                @if (Model.Model.NumberOfLessons > 1)
+                                {
+                                    <em>@((Model.DiscountPrice / Model.Model.NumberOfLessons).ToString("C")) per lesson</em>
+                                }
+                            </span>
+                        </p>
+                        <p>
+                            <strong class="red">@Model.DiscountPrice.ToString("C")</strong>
+                            @if (Model.Model.NumberOfLessons > 1)
+                            {
+                                <em>@((Model.DiscountPrice / Model.Model.NumberOfLessons).ToString("C")) per lesson</em>
+                            }
+                        </p>
+                    }
+                    else
+                    {
+                        <p>
+                            <strong>@Model.ListPrice.ToString("C")</strong>
+                            @if (Model.Model.NumberOfLessons > 1)
+                            {
+                                <em>@((Model.DiscountPrice / Model.Model.NumberOfLessons).ToString("C")) per lesson</em>
+                            }
+                        </p>
+                    }
+                    <br />
+                    <p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </p>
+                </div>
+                <div class="col-xs-6">
+                    <img class="img-responsive" src="http://placehold.it/800x600?text=@Model.Model.Name" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+﻿@model Website.ViewModels.Variations.MusicLesson.MusicLessonVariationViewModel
+
+<div class="card">
+    <img class="card-img-top img-responsive" src="http://placehold.it/600x300?text=@Model.Model.Name" />
+    <div class="card-block">
+        <h3 class="card-title">@Model.Model.Name</h3>
+        <p class="card-text">@Model.Model.SeoInformation.Description</p>
+        <p>
+            @Model.Model.NumberOfLessons lessons for
+            @if (Model.HasDiscount)
+            {
+                <br />
+                <span class="line-through">
+                    <strong class="line-through">@Model.ListPrice.ToString("C")</strong>
+                    
+                    @if (Model.Model.NumberOfLessons > 1)
+                    {
+                        <em>@((Model.ListPrice / Model.Model.NumberOfLessons).ToString("C")) per lesson</em>
+                    }
+                </span>
+                <br />
+                <strong class="red">@Model.DiscountPrice.ToString("C")</strong>
+
+                if (Model.Model.NumberOfLessons > 1)
+                {
+                    <em>@((Model.DiscountPrice / Model.Model.NumberOfLessons).ToString("C")) per lesson</em>
+                }
+            }
+            else
+            {
+                <br />
+                <strong>@Model.ListPrice.ToString("C")</strong>
+
+                if (Model.Model.NumberOfLessons > 1)
+                {
+                    <em>@((Model.ListPrice / Model.Model.NumberOfLessons).ToString("C")) per lesson</em>
+                }
+            }
+        </p>
+        <br />
+        <p>
+            <a href="@Model.Url" class="btn btn-primary">Buy now</a>
+        </p>
+    </div>
+</div>
